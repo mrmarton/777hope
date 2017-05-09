@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>777</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.0.2/mediaelementplayer.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.0.0/skip-back/skip-back.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  </head>
+  <body>
+
+    <h1>Did you know?</h1>
+
+    <div class="outer-container">
+      <video id="training-video" class="mejs__custom" controls poster="img/cover2.png">
+        <source
+          src="video/video.mp4"
+          type="video/mp4">
+        <source
+          src="video/video.ogg"
+          type="video/ogg">
+
+      </video>
+      <div class="inner-container">
+        <p>
+          <span class="tspan" id="t01">Now that we've looked at the architecture of the internet, let's see how you might</span>
+          <span class="tspan" id="t02">connect your personal devices to the internet inside your house.</span>
+          <span class="tspan" id="t03">Well there are many ways to connect to the internet, and</span>
+          <span class="tspan" id="t04">most often people connect wirelessly.</span>
+        </p>
+        <p>
+          <span class="tspan" id="t05">Let's look at an example of how you can connect to the internet.</span>
+          <span class="tspan" id="t06">If you live in a city or a town, you probably have a coaxial cable for</span>
+          <span class="tspan" id="t07">cable Internet, or a phone line if you have DSL, running to the outside of</span>
+          <span class="tspan" id="t08">your house, that connects you to the Internet Service Provider, or ISP.</span>
+          <span class="tspan" id="t09">If you live far out in the country, you'll more likely have</span>
+          <span class="tspan" id="t10">a dish outside your house, connecting you wirelessly to your closest ISP, or</span>
+          <span class="tspan" id="t11">you might also use the telephone system.</span>
+        </p>
+        <p>
+          <span class="tspan" id="t12">Whether a wire comes straight from the ISP hookup outside your house, or</span>
+          <span class="tspan" id="t13">it travels over radio waves from your roof,</span>
+          <span class="tspan" id="t14">the first stop a wire will make once inside your house, is at your modem.</span>
+          <span class="tspan" id="t15">A modem is what connects the internet to your network at home.</span>
+          <span class="tspan" id="t16">A few common residential modems are DSL or</span>
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.0.2/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.0.0/skip-back/skip-back.min.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      $('video').mediaelementplayer({
+        success: function(player, mode) {
+          player.load();
+        },
+        features : ['playpause','current','skipback','progress','duration','volume','fullscreen'],
+        skipBackInterval: 15,
+      });
+    </script>
+    <footer class="main-footer">
+        <p>Copyright Imre</p>
+    </footer>
+  </body>
+  
+</html>
